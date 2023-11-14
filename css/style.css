@@ -1,0 +1,129 @@
+body {
+    background-color: #52ACFF;
+    background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+}
+
+.container .row {
+    align-items: center;
+    height: 100vh;
+}
+
+.container .row a {
+    border: 1px solid linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    transform-origin: center;
+    perspective: 1000px;
+    border-radius: 8px;
+    height: 31%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    transition: all 1.5s;
+    color: blue;
+    overflow: hidden;
+}
+
+.container .row a:nth-child(2) i{
+    margin-right: 7px;
+    color:#ffa42cc7;
+}
+
+.container .row a:nth-child(4) i{
+    margin-right: 7px;
+    color:#53c45c;
+}
+
+
+.container .row a:nth-child(2),
+.container .row a:nth-child(4) {
+    transform: translateY(-20px);
+}
+
+.container .row a:nth-child(2):hover,
+.container .row a:nth-child(4):hover {
+    transform: translateY(-20px) rotateY(180deg);
+}
+
+.container .row a:hover {
+    transform: rotateY(180deg);
+}
+
+.container .row a h3{
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+    transition: all 1s;
+}
+.container .row a:hover h3 {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0s;
+}
+
+
+
+.container .row a p {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transition: all 0s;
+}
+
+.container .row a:hover p {
+    transform: translate(-50%, -50%) rotateY(180deg);
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s;
+    /* Đặt lại transform khi hover */
+}
+
+.modal-content {
+    height: 65vh;
+    transform: translateY(25%);
+}
+
+#bai1 .modal-body input{
+    position: relative;
+    outline: none;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-color:#f8d7da;
+    color:#f66d84;
+    transition: all .5s;
+}
+#bai1 .modal-body input::placeholder{
+    color:#f857a252;
+}
+
+#bai1 .modal-body input:focus{
+    border-color: #f66d84;
+}
+
+#bai1 .modal-body button {
+    padding: 28px 38px;
+    font-size: 15px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+    border: 1px solid transparent;
+    transition: all 0.5s;
+    border-radius: 30px;
+    color: #fff;
+    outline: none;
+    text-transform: uppercase;
+    line-height: 1.2px;
+}
+
+#bai1 .modal-body button:hover{
+    background-position: right;
+}
+
+#bai1 .modal-body .alert{
+    display: none;
+}
