@@ -2,20 +2,26 @@ function domId(id) {
     return document.getElementById(id);
 }
 
-
-
+function isValidInteger(value) {
+    return value !== "" && !isNaN(value) && Number.isInteger(Number(value));
+}
 //?  Start lesson 1
 domId('btn-1').onclick = function () {
-    var num1 = +domId('nhapSo1_B1').value;
-    var num2 = +domId('nhapSo2_B1').value;
-    var num3 = +domId('nhapSo3_B1').value;
+
+    
+    var num1 = domId('nhapSo1_B1').value;
+    var num2 = domId('nhapSo2_B1').value;
+    var num3 = domId('nhapSo3_B1').value;
     var flag;
 
-    if (num1 == "" || isNaN(num1) || num2 == "" || isNaN(num2) || num3 == "" || isNaN(num3)) {
+    if (!isValidInteger(num1) || !isValidInteger(num2) || !isValidInteger(num3) ){
         domId('result1').style.display = 'none'
         return;
     }
 
+    num1 = +num1
+    num2 = +num2
+    num3 = +num3
 
     if (num1 > num2) {
         flag = num2;
@@ -85,3 +91,52 @@ domId('close2').onclick = function () {
 
 }
 // ? End lesson 2
+
+
+//?  Start lesson 3
+domId('btn-3').onclick = function () {
+    var num1 = domId('nhapSo1_B3').value;
+    var num2 = domId('nhapSo2_B3').value;
+    var num3 = domId('nhapSo3_B3').value;
+    var odd = 0;
+    var even = 0;
+    if (!isValidInteger(num1) || !isValidInteger(num2) || !isValidInteger(num3) ){
+        domId('result3').style.display = 'none'
+        return;
+    }
+
+    num1 = +num1
+    num2 = +num2
+    num3 = +num3
+
+    if (num1 % 2 == 0){
+        even++;
+    }else{
+        odd++;
+    }
+    
+    if (num2 % 2 == 0){
+        even++;
+    }else{
+        odd++;
+    }
+    
+    if (num3 % 2 == 0){
+        even++;
+    }else{
+        odd++;
+    }
+  
+    domId('result3').style.display = 'block'
+    domId('result3').innerHTML = `Có ${even} chẵn & ${odd} lẻ`
+
+}
+
+domId('close3').onclick = function () {
+    domId('nhapSo1_B3').value = '';
+    domId('nhapSo2_B3').value = '';
+    domId('nhapSo3_B3').value = '';
+    domId('result3').style.display = 'none'
+}
+
+// ? End lesson 3

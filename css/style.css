@@ -93,7 +93,7 @@ li {
     transform: translateY(25%);
 }
 
-#bai1 .modal-body input {
+#bai1 .modal-body input,#bai3 .modal-body input {
     position: relative;
     outline: none;
     border-top-width: 0;
@@ -104,11 +104,12 @@ li {
     transition: all .5s;
 }
 
-#bai1 .modal-body input::placeholder {
+#bai1 .modal-body input::placeholder,#bai3 .modal-body input::placeholder {
     color: #f857a283;
 }
 
-#bai1 .modal-body input:focus {
+#bai1 .modal-body input:focus,
+#bai3 .modal-body input:focus  {
     border-color: #f66d84;
 }
 
@@ -131,7 +132,7 @@ li {
     background-position: right;
 }
 
-#bai1 .modal-body .alert {
+.modal-body .alert {
     display: none;
 }
 
@@ -212,10 +213,10 @@ li {
 
 
 #bai2 .modal-body button {
-    margin-top: -20px;
+    margin-top: -29px;
 }
 
-#bai2 .modal-body .alert {
+/* #bai2 .modal-body .alert {
     display: none;
-}
+} */
 

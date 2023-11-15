@@ -106,15 +106,16 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Sắp xếp theo thứ tự tăng dần</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title">Xác định các số nguyên chẵn & lẻ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close3"></button>
                 </div>
                 <div class="modal-body mx-auto d-flex mt-5">
                     <form class="d-flex flex-column gap-3">
-                        <input type="text" placeholder="Số nguyên thứ nhất" pattern="[0-9]* id=" nhapSo1_B1">
-                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]* id=" nhapSo2_B1">
-                        <input type="text" placeholder="Số nguyên thứ ba" pattern="[0-9]* id=" nhapSo3_B1">
-                        <button id="btn-1" class="mx-auto">Sắp xếp</button>
+                        <input type="text" placeholder="Số nguyên thứ nhất" pattern="[0-9]*" id="nhapSo1_B3">
+                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]*" id="nhapSo2_B3">
+                        <input type="text" placeholder="Số nguyên thứ ba" pattern="[0-9]*" id="nhapSo3_B3">
+                        <button type="button" id="btn-3" class="mx-auto">Thực Thi</button>
+                        <div class="alert alert-danger px-1 py-1 text-center" role="alert" id="result3"></div>
                     </form>
                 </div>
             </div>
@@ -125,14 +126,14 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Sắp xếp theo thứ tự tăng dần</h5>
+                    <h5 class="modal-title">xác định loại tam giác</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body mx-auto d-flex mt-5">
                     <form class="d-flex flex-column gap-3">
-                        <input type="text" placeholder="Số nguyên thứ nhất" pattern="[0-9]* id=" nhapSo1_B1">
-                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]* id=" nhapSo2_B1">
-                        <input type="text" placeholder="Số nguyên thứ ba" pattern="[0-9]* id=" nhapSo3_B1">
+                        <input type="text" placeholder="cạnh thứ nhất" pattern="[0-9]*" id="nhapSo1_B1">
+                        <input type="text" placeholder="cạnh thứ hai" pattern="[0-9]*" id="nhapSo2_B1">
+                        <input type="text" placeholder="cạnh thứ ba" pattern="[0-9]*" id="nhapSo3_B1">
                         <button id="btn-1" class="mx-auto">Sắp xếp</button>
                     </form>
                 </div>
