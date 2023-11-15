@@ -23,7 +23,7 @@
                 <h3>🚦 Bài tập 1</h3>
                 <p>Nhập vào 3 số nguyên & in ra 3 số theo thứ tự tăng dần</p>
             </a>
-            <a href="#" class="col-2" >
+            <a href="#" class="col-2" data-bs-toggle="modal" data-bs-target="#bai2">
                 <h3><i class="fa-solid fa-people-roof"> </i>Bài tập 2</h3>
                 <p>Viết chương trình chào hỏi các thành viên trong gia đình</p>
             </a>
@@ -43,16 +43,60 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Sắp xếp các số nguyên theo thứ tự tăng dần</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="close1"></button>
                 </div>
                 <div class="modal-body mx-auto d-flex mt-5">
                     <form class="d-flex flex-column gap-3">
                         <input type="text" placeholder="Số nguyên thứ nhất" pattern="[0-9]*" id="nhapSo1_B1">
-                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]*" id="nhapSo2_B1"> 
+                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]*" id="nhapSo2_B1">
                         <input type="text" placeholder="Số nguyên thứ ba" pattern="[0-9]*" id="nhapSo3_B1">
                         <button type="button" id="btn-1" class="mx-auto">Sắp xếp</button>
                         <div class="alert alert-danger px-1 py-1 text-center" role="alert" id="result1"></div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" tabindex="-1" id="bai2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chào hỏi các thành viên trong gia đình?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="close2"></button>
+                </div>
+                <div class="modal-body mx-auto d-flex flex-column mt-5">
+                    <h2>Bạn là ai trong gia đình?</h2>
+                    <ul>
+                        <li class="type">
+                            <input type="radio" name="selector" id="father">
+                            <label for="father">Bố</label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li class="type">
+                            <input type="radio" name="selector" id="mother">
+                            <label for="mother">Mẹ</label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li class="type">
+                            <input type="radio" name="selector" id="brother">
+                            <label for="brother">Anh trai</label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li class="type">
+                            <input type="radio" name="selector" id="sister">
+                            <label for="sister">Em gái</label>
+                            <div class="check"></div>
+                        </li>
+                    </ul>
+                    <button id="btn-2" class="mx-auto">Click me</button>
+                    <div class="alert alert-danger py-1 mt-2 text-center" role="alert" id="result2"></div>
                 </div>
             </div>
         </div>
@@ -67,9 +111,9 @@
                 </div>
                 <div class="modal-body mx-auto d-flex mt-5">
                     <form class="d-flex flex-column gap-3">
-                        <input type="text" placeholder="Số nguyên thứ nhất" pattern="[0-9]* id="nhapSo1_B1">
-                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]* id="nhapSo2_B1"> 
-                        <input type="text" placeholder="Số nguyên thứ ba" pattern="[0-9]* id="nhapSo3_B1">
+                        <input type="text" placeholder="Số nguyên thứ nhất" pattern="[0-9]* id=" nhapSo1_B1">
+                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]* id=" nhapSo2_B1">
+                        <input type="text" placeholder="Số nguyên thứ ba" pattern="[0-9]* id=" nhapSo3_B1">
                         <button id="btn-1" class="mx-auto">Sắp xếp</button>
                     </form>
                 </div>
@@ -86,9 +130,9 @@
                 </div>
                 <div class="modal-body mx-auto d-flex mt-5">
                     <form class="d-flex flex-column gap-3">
-                        <input type="text" placeholder="Số nguyên thứ nhất" pattern="[0-9]* id="nhapSo1_B1">
-                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]* id="nhapSo2_B1"> 
-                        <input type="text" placeholder="Số nguyên thứ ba" pattern="[0-9]* id="nhapSo3_B1">
+                        <input type="text" placeholder="Số nguyên thứ nhất" pattern="[0-9]* id=" nhapSo1_B1">
+                        <input type="text" placeholder="Số nguyên thứ hai" pattern="[0-9]* id=" nhapSo2_B1">
+                        <input type="text" placeholder="Số nguyên thứ ba" pattern="[0-9]* id=" nhapSo3_B1">
                         <button id="btn-1" class="mx-auto">Sắp xếp</button>
                     </form>
                 </div>
