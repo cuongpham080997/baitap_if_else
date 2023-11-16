@@ -21,10 +21,9 @@ function uncheckRadio(str) {
 }
 
 function uncheckCheckBox(str) {
-    // Lựa chọn radio button cần bỏ chọn bằng cách sử dụng CSS selector
     var checkboxs = document.querySelectorAll(`input[name=${str}]`);
 
-    // Duyệt qua từng radio và bỏ chọn nó
+    // Duyệt qua từng checkbox và bỏ chọn nó
     checkboxs.forEach(function (checkbox) {
         checkbox.checked = false;
     });

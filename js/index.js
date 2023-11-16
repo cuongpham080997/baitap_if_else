@@ -1,7 +1,5 @@
 //?  Start lesson 1
 domId('btn-1').onclick = function () {
-
-
     var num1 = domId('nhapSo1_B1').value;
     var num2 = domId('nhapSo2_B1').value;
     var num3 = domId('nhapSo3_B1').value;
@@ -129,8 +127,6 @@ domId('close3').onclick = function () {
 
 //?  Start lesson 4
 
-
-
 domId('btn-4').onclick = function () {
     var a = +domId('nhapSo1_B4').value.replace('√', '');
     var b = +domId('nhapSo2_B4').value.replace('√', '');
@@ -163,7 +159,7 @@ domId('btn-4').onclick = function () {
             domId('result4').innerHTML = `<span>Tam giác cân: </span><img src="https://globalsymbols.com/uploads/production/image/imagefile/6033/13_6033_970f5f12-9af7-4030-9ae0-754f63ede513.svg" alt="" style="width: 25px; margin-bottom: 3px">`
         }
     }
-    else if (a * a + b * b === c * c || a * a + c * c === b * b || b * b + c * c === a * a) {
+    else if (checkRightTriangle(a,b,c) || checkRightTriangle(a,c,b) || checkRightTriangle(b,c,a)) {
         domId('result4').innerHTML = `<span>Tam giác vuông: </span><img src="https://globalsymbols.com/uploads/production/image/imagefile/6035/13_6035_68e31729-061a-4fa2-80e2-b3dc0a20730b.svg" alt="" style="width: 25px; margin-bottom: 5px">`
     } else {
         domId('result4').innerHTML = `<span>Tam giác nhọn: </span><img src="https://globalsymbols.com/uploads/production/image/imagefile/6034/13_6034_406dfaa3-fb3b-409b-be3e-5b800084e8ae.svg" alt="" style="width: 25px; margin-bottom: 3px">`
