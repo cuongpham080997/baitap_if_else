@@ -111,7 +111,8 @@ li {
 }
 
 #bai1 .modal-body input:focus,
-#bai3 .modal-body input:focus  {
+#bai3 .modal-body input:focus,
+#bai4 .modal-body input:focus{
     border-color: #f66d84;
 }
 
@@ -218,7 +219,4 @@ li {
     margin-top: -29px;
 }
 
-/* #bai2 .modal-body .alert {
-    display: none;
-} */
 

@@ -1,14 +1,3 @@
-function domId(id) {
-    return document.getElementById(id);
-}
-
-function isValidInteger(value) {
-    return value !== "" && !isNaN(value) && Number.isInteger(Number(value));
-}
-
-function isValidNumber(num) {
-    return !isNaN(num) && num > 0
-}
 //?  Start lesson 1
 domId('btn-1').onclick = function () {
 
@@ -81,22 +70,9 @@ domId('btn-2').onclick = function () {
     domId('result2').style.display = 'block'
 }
 
-
-
-function uncheckRadio() {
-    // Lựa chọn radio button cần bỏ chọn bằng cách sử dụng CSS selector
-    var radio = document.querySelector('input[name="selector"]:checked');
-
-    // Nếu có radio được chọn, bỏ chọn nó
-    if (radio) {
-        radio.checked = false;
-    }
-}
-
-
 domId('close2').onclick = function () {
     domId('result2').style.display = 'none'
-    uncheckRadio()
+    uncheckRadio('selector')
 
 }
 // ? End lesson 2
@@ -152,21 +128,42 @@ domId('close3').onclick = function () {
 
 
 //?  Start lesson 4
+
+
+
 domId('btn-4').onclick = function () {
-    var a = +domId('nhapSo1_B4').value;
-    var b = +domId('nhapSo2_B4').value;
-    var c = +domId('nhapSo3_B4').value;
+    var a = +domId('nhapSo1_B4').value.replace('√', '');
+    var b = +domId('nhapSo2_B4').value.replace('√', '');
+    var c = +domId('nhapSo3_B4').value.replace('√', '');
 
 
     if (!isValidNumber(a) || !isValidNumber(b) || !isValidNumber(c)) {
         domId('result4').style.display = 'none';
         return;
     }
-    else if (a === b && b === c) {
+
+    if (domId('checkbox1').checked) {
+        a = Math.sqrt(a)
+    }
+
+    if (domId('checkbox2').checked) {
+        b = Math.sqrt(b)
+    }
+
+    if (domId('checkbox3').checked) {
+        c = Math.sqrt(c)
+    }
+
+    if (a === b && b === c) {
         domId('result4').innerHTML = `<span>Tam giác đều: </span><img src="https://globalsymbols.com/uploads/production/image/imagefile/6032/13_6032_8d433852-9a22-4d52-81de-5ddc1d8ffa45.svg" alt="" style="width: 25px; margin-bottom: 3px">`
-    } else if (a === b || b === c || a === c) {
-        domId('result4').innerHTML = `<span>Tam giác cân: </span><img src="https://globalsymbols.com/uploads/production/image/imagefile/6033/13_6033_970f5f12-9af7-4030-9ae0-754f63ede513.svg" alt="" style="width: 25px; margin-bottom: 3px">`
-    } else if (a * a + b * b === c * c || a * a + c * c === b * b || b * b + c * c === a * a) {
+    }else if (a == b || a == c || b == c) {
+        if (checkRightTriangle(a,b,c) || checkRightTriangle(a,c,b) || checkRightTriangle(b,c,a)) {
+            domId('result4').innerHTML = `<span>Tam giác vuông cân: </span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Isosceles-right-triangle.svg/351px-Isosceles-right-triangle.svg.png" alt="" style="width: 25px; margin-bottom: 5px">`
+        }else {
+            domId('result4').innerHTML = `<span>Tam giác cân: </span><img src="https://globalsymbols.com/uploads/production/image/imagefile/6033/13_6033_970f5f12-9af7-4030-9ae0-754f63ede513.svg" alt="" style="width: 25px; margin-bottom: 3px">`
+        }
+    }
+    else if (a * a + b * b === c * c || a * a + c * c === b * b || b * b + c * c === a * a) {
         domId('result4').innerHTML = `<span>Tam giác vuông: </span><img src="https://globalsymbols.com/uploads/production/image/imagefile/6035/13_6035_68e31729-061a-4fa2-80e2-b3dc0a20730b.svg" alt="" style="width: 25px; margin-bottom: 5px">`
     } else {
         domId('result4').innerHTML = `<span>Tam giác nhọn: </span><img src="https://globalsymbols.com/uploads/production/image/imagefile/6034/13_6034_406dfaa3-fb3b-409b-be3e-5b800084e8ae.svg" alt="" style="width: 25px; margin-bottom: 3px">`
@@ -180,5 +177,7 @@ domId('close4').onclick = function () {
     domId('nhapSo2_B4').value = '';
     domId('nhapSo3_B4').value = '';
     domId('result4').style.display = 'none'
+    uncheckCheckBox('checkbox')
 }
 // ? End lesson 4
+

@@ -131,9 +131,21 @@
                 </div>
                 <div class="modal-body mx-auto d-flex mt-5">
                     <form class="d-flex flex-column gap-3">
-                        <input type="text" placeholder="cạnh thứ nhất" pattern="[0-9]*" id="nhapSo1_B4">
-                        <input type="text" placeholder="cạnh thứ hai" pattern="[0-9]*" id="nhapSo2_B4">
-                        <input type="text" placeholder="cạnh thứ ba" pattern="[0-9]*" id="nhapSo3_B4">
+                        <div>
+                            <input type="text" placeholder="cạnh thứ nhất" pattern="√?[0-9]*" id="nhapSo1_B4">
+                            <input type="checkbox" id="checkbox1" onclick="checkCheckBox('checkbox1','nhapSo1_B4')" name="checkbox">
+                            <label for="checkbox1">Căn bậc 2</label>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="cạnh thứ hai" pattern="√?[0-9]*" id="nhapSo2_B4">
+                            <input type="checkbox" id="checkbox2" onclick="checkCheckBox('checkbox2','nhapSo2_B4')" name="checkbox">
+                            <label for="checkbox2">Căn bậc 2</label>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="cạnh thứ ba" pattern="√?[0-9]*" id="nhapSo3_B4">
+                            <input type="checkbox" id="checkbox3" onclick="checkCheckBox('checkbox3','nhapSo3_B4')" name="checkbox">
+                            <label for="checkbox3">Căn bậc 2</label>
+                        </div>
                         <button type="button" id="btn-4" class="mx-auto">Sắp xếp</button>
                         <div class="alert alert-danger py-1 mt-2 text-center" role="alert" id="result4">
                         </div>
@@ -152,6 +164,8 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
 
+    <!-- common js -->
+    <script src="./js/common/method.js"></script>
     <!-- main js -->
     <script src="./js/index.js"></script>
 </body>
